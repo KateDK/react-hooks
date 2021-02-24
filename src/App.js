@@ -1,7 +1,8 @@
+import React, { useState } from 'react';
 import './App.css';
-
 function App() {
-  return <div className="App">Hello</div>;
+  const greeting = useState('Hi');
+  return <div className="App">{greeting}</div>;
 }
 
 export default App;
