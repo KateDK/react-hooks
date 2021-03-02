@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
 function App() {
-  const [greeting] = useState('Hi');
-  console.log(greeting);
-  return <div className="App">{greeting}</div>;
+  const [greeting, setGreeting] = useState('Hi');
+  const [inputVal, setInputVal] = useState('');
   return (
     <div className="App">
       <h1>{greeting}</h1>
