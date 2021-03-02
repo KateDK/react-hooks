@@ -3,6 +3,10 @@ import './App.css';
 function App() {
   const [greeting, setGreeting] = useState('Hi');
   const [inputVal, setInputVal] = useState('');
+  const handleSubmit = (e) => {
+    setGreeting(inputVal);
+    setInputVal('');
+  };
   return (
     <div className="App">
       <h1>{greeting}</h1>
