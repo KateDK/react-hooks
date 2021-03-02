@@ -11,9 +11,14 @@ function App() {
         <input
           type="text"
           value={inputVal}
+          onChange={(e) => setInputVal(e.target.value)}
         />
       </label>
       <button
+        onClick={() => {
+          setGreeting(inputVal);
+          setInputVal('');
+        }}
       >
         Save
       </button>
