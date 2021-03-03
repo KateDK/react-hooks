@@ -8,8 +8,6 @@ function App() {
     e.preventDefault();
   };
 
-  const handleChange = (e) => {};
-
   return (
     <div className="App">
       <h1>Contact creator</h1>
@@ -18,6 +16,7 @@ function App() {
           First Name:
           <input
             type="text"
+            name="firstName"
             value={contact.firstName}
             onChange={(e) => handleChange(e)}
           />
@@ -26,8 +25,9 @@ function App() {
           Last Name:
           <input
             type="text"
+            name="lastName"
             value={contact.lastName}
-            onChange={(e) => console.log(e.target.value)}
+            onChange={(e) => handleChange(e)}
           />
         </label>
         <button type="submit">Add Contact</button>
