@@ -6,7 +6,7 @@ function App() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setContact({ ...contact, [name]: value });
+    setContact((prevContact) => ({ ...prevContact, [name]: value }));
   };
   const handleSubmit = (e) => {
     e.preventDefault();
