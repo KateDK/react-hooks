@@ -10,12 +10,8 @@ function App() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    setContactData((prevContacts) => [
-      ...prevContacts,
-      `${contact.firstName} ${contact.lastName}`,
-    ]);
+    setContactData((prevContacts) => [...prevContacts, contact]);
     setContact({ firstName: '', lastName: '' });
-    console.log(contactData);
   };
 
   return (
