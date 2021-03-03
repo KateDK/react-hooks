@@ -1,26 +1,36 @@
 import React, { useState } from 'react';
 import './App.css';
 function App() {
-  const [greeting, setGreeting] = useState('Hi');
-  const [inputVal, setInputVal] = useState('');
+  const [contact, setContact] = useState({ firstName: '', lastName: '' });
+  const [contactData, setContactData] = useState([]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    setGreeting(inputVal);
-    setInputVal('');
   };
+
+  const handleChange = (e) => {};
+
   return (
     <div className="App">
-      <h1>{greeting}</h1>
+      <h1>Contact creator</h1>
       <form onSubmit={(e) => handleSubmit(e)}>
         <label>
-          New Greeting:
+          First Name:
           <input
             type="text"
-            value={inputVal}
-            onChange={(e) => setInputVal(e.target.value)}
+            value={contact.firstName}
+            onChange={(e) => handleChange(e)}
           />
         </label>
-        <button type="submit">Save</button>
+        <label>
+          Last Name:
+          <input
+            type="text"
+            value={contact.lastName}
+            onChange={(e) => console.log(e.target.value)}
+          />
+        </label>
+        <button type="submit">Add Contact</button>
       </form>
     </div>
   );
