@@ -21,14 +21,14 @@ function App() {
   return (
     <div className="App">
       <h1>Contact creator</h1>
-      <form onSubmit={(e) => handleSubmit(e)}>
+      <form onSubmit={handleSubmit}>
         <label>
           First Name:
           <input
             type="text"
             name="firstName"
             value={contact.firstName}
-            onChange={(e) => handleChange(e)}
+            onChange={handleChange}
           />
         </label>
         <label>
@@ -37,7 +37,7 @@ function App() {
             type="text"
             name="lastName"
             value={contact.lastName}
-            onChange={(e) => handleChange(e)}
+            onChange={handleChange}
           />
         </label>
         <button type="submit">Add Contact</button>
