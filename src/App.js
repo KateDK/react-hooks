@@ -4,6 +4,10 @@ function App() {
   const [contact, setContact] = useState({ firstName: '', lastName: '' });
   const [contactData, setContactData] = useState([]);
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setContact({ ...contact, [name]: value });
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
   };
