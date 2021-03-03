@@ -38,6 +38,13 @@ function App() {
         </label>
         <button type="submit">Add Contact</button>
       </form>
+      <ol>
+        {contactData.map((person) => (
+          <li
+            key={Math.random()}
+          >{`${person.firstName} ${person.lastName}`}</li>
+        ))}
+      </ol>
     </div>
   );
 }
