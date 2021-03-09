@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import './App.css';
 function App() {
   const [contact, setContact] = useState({ firstName: '', lastName: '' });
@@ -17,7 +16,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Contact creator</h1>
       <h1 style={{ color: color }}>Contact creator</h1>
       <form onSubmit={handleSubmit}>
         <label>
