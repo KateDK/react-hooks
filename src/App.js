@@ -18,6 +18,7 @@ function App() {
   return (
     <div className="App">
       <h1>Contact creator</h1>
+      <h1 style={{ color: color }}>Contact creator</h1>
       <form onSubmit={handleSubmit}>
         <label>
           First Name:
