@@ -4,6 +4,7 @@ function App() {
   const [contact, setContact] = useState({ firstName: '', lastName: '' });
   const [contactData, setContactData] = useState([]);
 
+  const [color, setColor] = useState('');
   const handleChange = (e) => {
     const { name, value } = e.target;
     setContact((prevContact) => ({ ...prevContact, [name]: value }));
