@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import randomColor from 'randomcolor';
-
 import './App.css';
+
 function App() {
   const [contact, setContact] = useState({ firstName: '', lastName: '' });
   const [contactData, setContactData] = useState([]);
