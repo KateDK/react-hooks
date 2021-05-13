@@ -10,7 +10,9 @@ function App() {
     const { name, value } = e.target;
     setContact((prevContact) => ({ ...prevContact, [name]: value }));
   };
+
   useEffect(() => setColor(randomColor()), [contactData]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setContactData((prevContacts) => [...prevContacts, contact]);
